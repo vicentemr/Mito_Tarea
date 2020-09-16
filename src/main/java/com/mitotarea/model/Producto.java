@@ -16,11 +16,11 @@ public class Producto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idProducto;
 	
-	@Size(min = 3, message = "Nombres deben contener minimo 3 caracteres.")
+	@Size(min = 3, message = "{nombres.size}")
 	@Column(name = "nombres", nullable = false, length = 70)
 	private String nombres;
 	
-	@Size(min = 1, message = "marca deben contener minimo 1 caracter.")
+	@Size(min = 1, message = "{marcas.size}")
 	@Column(name = "marca", nullable = false, length = 70)
 	private String marca;
 	
